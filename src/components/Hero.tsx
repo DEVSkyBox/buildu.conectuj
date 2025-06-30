@@ -19,8 +19,8 @@ const Hero = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-10 flex items-center justify-between p-6 md:p-8">
-        <div className="flex items-center space-x-4">
+      <nav className="relative z-10 flex items-center max-sm:justify-center justify-between max-sm:pl-[0px] p-6 md:p-8">
+        <div className="flex max-sm:w-full items-center max-sm:space-x-0 space-x-4">
           <img 
             src="/conectuj_logo1-removebg-preview.png" 
             alt="BuildU Logo" 
@@ -33,7 +33,7 @@ const Hero = () => {
         </div>
         <Button 
           onClick={scrollToWaitlist}
-          className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2"
+          className="bg-purple-600 hover:bg-purple-700 max-sm:hidden text-white px-6 py-2"
         >
           Join Waitlist
         </Button>

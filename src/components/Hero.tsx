@@ -22,7 +22,7 @@ const Hero = () => {
       <nav className="relative z-10 flex items-center justify-between p-6 md:p-8">
         <div className="flex items-center space-x-4">
           <img 
-            src="/public/conectuj_logo1-removebg-preview.png" 
+            src="/conectuj_logo1-removebg-preview.png" 
             alt="BuildU Logo" 
             className="h-20 w-27 rounded-full"
           />

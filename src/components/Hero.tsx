@@ -15,15 +15,16 @@ const Hero = () => {
         <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-purple-500/5 to-transparent rounded-full"></div>
+        {/* <img src="/public/Captureweb2.PNG"  className="absolute inset-0 w-full h-full opacity-10 " alt="" /> */}
       </div>
 
       {/* Navigation */}
       <nav className="relative z-10 flex items-center justify-between p-6 md:p-8">
         <div className="flex items-center space-x-4">
           <img 
-            src="/lovable-uploads/781e3cca-b3e4-478c-83f1-fc992512fbc7.png" 
+            src="/public/conectuj_logo1-removebg-preview.png" 
             alt="BuildU Logo" 
-            className="h-12 w-12 rounded-full"
+            className="h-20 w-27 rounded-full"
           />
           <div>
             <h1 className="text-2xl font-bold text-white">BuildU</h1>
@@ -46,9 +47,9 @@ const Hero = () => {
             <img 
               src="/lovable-uploads/88a6a47f-c8c3-4135-adf6-6e23eea54408.png" 
               alt="ConectUJ Logo" 
-              className="h-20 w-20 mx-auto mb-4"
+              className="h-[150px] w-[150px] mx-auto mb-4"
             />
-            <h2 className="text-xl text-purple-400 font-semibold">ConectUJ</h2>
+            <h2 className="text-[35px] text-yellow-600/80 animate-bounce  font-semibold">ConectUJ</h2>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -75,19 +76,19 @@ const Hero = () => {
             <Button 
               onClick={scrollToWaitlist}
               size="lg" 
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/40"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700  hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg shadow-purple-500/25 transition-all duration-10 animate-pulse hover:shadow-xl hover:shadow-purple-500/40"
             >
               Join the Revolution
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button 
+            {/* <Button 
               variant="outline" 
               size="lg" 
               className="border-gray-600 text-gray-300 hover:bg-gray-800 px-8 py-4 text-lg rounded-full"
             >
               <Play className="mr-2 h-5 w-5" />
               Watch Demo
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

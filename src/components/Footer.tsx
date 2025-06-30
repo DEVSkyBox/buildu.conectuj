@@ -9,9 +9,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-4 mb-6">
               <img 
-                src="/lovable-uploads/781e3cca-b3e4-478c-83f1-fc992512fbc7.png" 
+                src="/public/conectuj_logo1-removebg-preview.png" 
                 alt="BuildU Logo" 
-                className="h-10 w-10 rounded-full"
+                className="h-20 w-27 rounded-full"
               />
               <div>
                 <h3 className="text-xl font-bold text-white">BuildU</h3>
@@ -40,15 +40,15 @@ const Footer = () => {
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
-                <span>hello@buildu.com</span>
+                <span>build.u123@gmail.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-2" />
-                <span>+234 XXX XXX XXXX</span>
+                <span>+234 701 919 2799</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="h-4 w-4 mr-2" />
-                <span>Nigeria</span>
+                <span>Plateau, Nigeria.</span>
               </div>
             </div>
           </div>

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { Mail } from "lucide-react";
+// import formAuth from "./"
 
 const Waitlist = () => {
   const [email, setEmail] = useState("");
@@ -17,7 +18,18 @@ const Waitlist = () => {
     setIsSubmitting(true);
 
     // Simulate API call
-    setTimeout(() => {
+    try {
+      toast({
+        title: "Welcome to the waitlist! 🎉",
+        description: "We'll notify you as soon as ConectUJ launches at your university.",
+      });
+    const response = await fetch("http://localhost:5000/api/waitlist", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, university }),
+    });
+
+    if (response.ok) {
       toast({
         title: "Welcome to the waitlist! 🎉",
         description: "We'll notify you as soon as ConectUJ launches at your university.",
@@ -25,9 +37,22 @@ const Waitlist = () => {
       setEmail("");
       setName("");
       setUniversity("");
-      setIsSubmitting(false);
-    }, 1000);
-  };
+    } else {
+      const errorData = await response.json();
+      toast({
+        title: "Error",
+        description: errorData.error || "Something went wrong.",
+      });
+    }
+  } catch (error) {
+    toast({
+      title: "Network Error",
+      description: "Could not connect to the server.",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <section id="waitlist" className="py-20 bg-gradient-to-br from-purple-900/20 to-blue-900/20">
@@ -37,7 +62,9 @@ const Waitlist = () => {
             Join the Revolution
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Be among the first to experience ConectUJ when it launches at your university. 
+            Be among the first to experience ConectUJ when it launches.
+          </p>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Join our exclusive waitlist and get early access.
           </p>
         </div>

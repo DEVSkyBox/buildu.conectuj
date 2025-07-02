@@ -24,7 +24,7 @@ const Hero = () => {
           <img 
             src="/conectuj_logo1-removebg-preview.png" 
             alt="BuildU Logo" 
-            className="h-20 w-27 rounded-full"
+            className="h-[64px] w-[73px] rounded-full"
           />
           <div>
             <h1 className="text-2xl font-bold text-white">BuildU</h1>

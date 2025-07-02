@@ -23,7 +23,7 @@ const Waitlist = () => {
         title: "Welcome to the waitlist! 🎉",
         description: "We'll notify you as soon as ConectUJ launches at your university.",
       });
-    const response = await fetch("http://localhost:5000/api/waitlist", {
+    const response = await fetch("https://waitlist-backend-0o2n.onrender.com/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, university }),
